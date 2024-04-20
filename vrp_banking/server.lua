@@ -107,8 +107,8 @@ function Banking:transfer(transfer, to) -- NOT TESTED
             local user_bank = balance - tonumber(transfer)
             user:setBank(user_bank)
             tuser:giveBank(tonumber(transfer))
-            vRP.EXT.Base.remote._notify(user.source, string.format("You transferred $%d to %s.", tonumber(transfer), tuser.name))
-            vRP.EXT.Base.remote._notify(tuser.source, string.format("You received a transfer of $%d from %s.", tonumber(transfer), user.name))
+            vRP.EXT.Base.remote._notify(user.source, string.format("You transferred $%d to %s.", tonumber(transfer)))
+            vRP.EXT.Base.remote._notify(tuser.source, string.format("You received a transfer of $%d from %s.", tonumber(transfer)))
             
             local transaction_date = os.date("%Y-%m-%d %H:%M:%S")
             local transaction_type = "Transfer"
