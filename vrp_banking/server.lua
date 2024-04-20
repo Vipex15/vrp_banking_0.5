@@ -93,7 +93,7 @@ function Banking:deposit(amount)
 end
 
 -- Function to handle money transfer between users
-function Banking:transfer(transfer, to)
+function Banking:transfer(transfer, to) -- NOT TESTED
     local user = vRP.users_by_source[source]
     local character_id = user.cid
     local tuser = vRP.users_by_source[to]                
