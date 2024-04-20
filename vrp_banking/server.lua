@@ -204,9 +204,7 @@ local function menu_police_pc_trans(self)
                                 end
                             end)
                             for index, transaction in ipairs(transactions) do
-                                local transaction_info = string.format("Transaction %d:<br>Type: %s<br>Amount: %s$<br>Transfer to: %s<br>Date: %s <br>Hours:%s", 
-                                                                       index, transaction.transaction_type, transaction.amount, transaction.transfer_to, 
-                                                                       transaction.transaction_date, transaction.transaction_hours)
+                                local transaction_info = string.format("Transaction %d:<br>Type: %s<br>Amount: %s$<br>Transfer to: %s<br>Date: %s <br>Hours:%s", index, transaction.transaction_type, transaction.amount, transaction.transfer_to,  transaction.transaction_date, transaction.transaction_hours)
                                 menu:addOption("Transaction " .. index, nil, transaction_info)
                             end
                         else
